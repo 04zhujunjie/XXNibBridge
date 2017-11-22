@@ -101,3 +101,16 @@
 }
 
 @end
+
+@implementation UIView (XXNibConstraint)
+
+
+- (NSLayoutConstraint *)xx_constraintWithIdentifier:(NSString *)identifier{
+    for (NSLayoutConstraint *constraint in self.constraints) {
+        if ([constraint.identifier isEqualToString:identifier]) {
+            return constraint;
+        }
+    }
+    return nil;
+}
+@end

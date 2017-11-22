@@ -5,7 +5,7 @@
 //  Created by sunnyxx on 14-7-2.
 //  Copyright (c) 2014年 sunnyxx. All rights reserved.
 //
-
+Resolve modification constraints with Identifier
 #import "XXSarkView.h"
 #import "XXNibBridge.h"
 #import "XXDogeView.h"
@@ -19,8 +19,10 @@
 
 - (void)awakeFromNib {
     // IBOutlets are fine
+    [super awakeFromNib];
     self.dogeView.layer.cornerRadius = 5;
-    self.heightConstraint.constant = 81;
+//    self.heightConstraint.constant = 60;
+    [self.dogeView xx_constraintWithIdentifier:@"DogeHeightConstraintIdentifier"].constant = 82;
 }
 
 @end

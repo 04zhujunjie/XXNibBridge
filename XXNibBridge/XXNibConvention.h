@@ -65,3 +65,7 @@
 + (id)xx_instantiateFromStoryboardNamed:(NSString *)name;
 
 @end
+
+@interface UIView (XXNibConstraint)
+- (NSLayoutConstraint *)xx_constraintWithIdentifier:(NSString *)identifier;
+@end
